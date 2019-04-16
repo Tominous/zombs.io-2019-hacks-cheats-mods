@@ -1,6 +1,6 @@
 <h2>About Zombs.io Mod</h2>
 It helps you to play with extra features and when you visit the game, buttons will appear to press options. In addition, zombs.io script, zombs.io mods, zombs.io hacks, zombs.io cheats whatever you call, increases your game play and make you better player. 
-
+</br>
 <b>General Settings For All .io Mods:</b>
 <ul><li>Zoom IN/OUT</li>
 <li>Change Background</li>
