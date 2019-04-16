@@ -1,9 +1,9 @@
 // ==UserScript==
 // @name         Zombs.io Hacks Cheats Mods 2019 - Working - (sandbox-unblocked) by ioMods.org
-// @description  Zombsio Mods Features: Strange Mode, Auto Heal, Aimbot, Speed hack, FPS Created by ioMods.org
+// @description  Zombsio Mods Features: Zoom Hack, Speed Hack, Auto Aim, Auto Heal, FPS, Adblock Created by ioMods.org
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      1.0
+// @version      1.1
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @updateURL    https://iomods.org/mods/zombsio.user.js
 // @downloadURL  https://iomods.org/mods/zombsio.user.js
@@ -67,16 +67,16 @@ text += '<a href="http://'+value+'" target="_blank" style="'+ministyler+'">'+val
      facebooker: '<div id="fb-root" style="display: inline-block;"></div><script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_EN/sdk.js#xfbml=1&version=v3.2"></script><div class="fb-like" style="display: inline-block;" data-href="https://facebook.com/slitherecom" data-layout="button_count" data-action="like" data-size="small" data-show-faces="false" data-share="false"></div>',
      youtuber: "<script src=\"https://apis.google.com/js/platform.js\"></script><div class=\"g-ytsubscribe\" data-channelid=\"UCy6xGaMhm74YeHMDGgEr7kg\" data-layout=\"default\" style=\"display: inline-block;\" data-count=\"default\"></div>",
      formstyle: "border:2px solid black;border-radius:20px;padding:5px;background-color: rgba(245, 245, 245, 1.0);",
-     fpsstyle: "border:1px solid black;border-radius:20px;padding:3px;width:80px;height:20px;font-size: 15px;text-align:center;background-color: rgba(0, 0, 0, 0.8);color:white;",
+     fpsstyle: "border:1px solid black;border-radius:20px;padding:3px;width:80px;height:25px;font-size: 15px;text-align:center;background-color: rgba(0, 0, 0, 0.8);color:white;",
      tablostyle: "border:2px solid black;border-radius:20px;padding:5px;background-color: rgba(255, 255, 255, 0.3);",
      liststyler: "color:white;background-color: black;padding:3px;border-style:double;-webkit-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);-moz-box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);box-shadow: 1px 1px 2px 1px rgba(0,0,0,0.39);",
    	 imagelist: '<a href="https://instagram.com/aecicekdagi" target="_blank"><img src="https://iomods.org/mods/instagram.jpg"></a> <a href="https://www.youtube.com/c/pignuts" target="_blank"><img src="https://iomods.org/mods/youtube.jpg"></a> <a href="https://facebook.com/slitherecom" target="_blank"><img src="https://iomods.org/mods/facebook.jpg"></a></br>',
 };
 
 //degisenkisimlar
-$('#mopeMenu').prepend('<div style="'+this.settings.fpsstyle+'" id="fps" class="fps"></div>');
+$('.hud-intro-wrapper').append('<div style="'+this.settings.fpsstyle+'" id="fps" class="fps"></div>');
 $('.hud-intro-left').html('<div style="'+this.settings.formstyle+'"><div class="option1"></div>'+this.settings.imagelist+''+this.settings.youtuber+''+this.settings.facebooker+'</div>');
-$('#updatesDiv').prepend('<div class="list1"></div>');
+$('.hud-intro-form').append('<hr><div class="list1"></div>');
 //general
 $('.option1').html('<a style="'+this.settings.optionstyler+'" href="http://'+this.settings.l1+'" target="blank">'+this.settings.feature1+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="fps" onchange="window.open(\'http://'+this.settings.l1+'\', \'_blank\', \''+this.settings.locationer+'\');" checked></label>'+this.settings.string+'<a style="'+this.settings.optionstyler2+'" href="http://'+this.settings.l2+'" target="blank">'+this.settings.feature2+'</a> <label style="'+this.settings.buttonpadder+'" class=\'switch\'><input type=\'checkbox\' class="strange" id="remember" onchange="window.open(\'http://'+this.settings.l2+'\', \'_blank\', \''+this.settings.locationer+'\');"><span class=\'slider\'></span></label><div class="option2"></div>');
 $('.option1').on('click', '.fps', function() { hideandseek(); });
@@ -158,7 +158,7 @@ document.getElementsByClassName('btn btn-green hud-intro-play')[0].onclick = fun
        setInterval(function() {
         Game.currentGame.world.localPlayer.entity.fromTick.yaw = '0';
     }, 100);
-	}; 
+	};
 	}
 }
 
