@@ -1,6 +1,6 @@
 // ==UserScript==
-// @name         Zombs.io Hacks Cheats Mods 2019 - Working - (sandbox-unblocked) by ioMods.org
-// @description  Zombsio Mods Features: Zoom Hack, Speed Hack, Auto Aim, Auto Heal, FPS, Adblock Created by ioMods.org
+// @name         Zombs.io AUTO HEAL - Zombsio Hacks - Best Zombs Cheat 2019
+// @description  Zombsio Mods Features: Zoom Hack, Speed Hack, Auto Aim, Auto Heal, FPS, Adblock
 // @namespace    iomods.org
 // @author       iomods.org
 // @version      1.1
