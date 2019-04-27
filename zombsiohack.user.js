@@ -3,7 +3,7 @@
 // @description  Zombsio Mods Features: Zoom Hack, Speed Hack, Auto Aim, Auto Heal, FPS, Adblock
 // @namespace    iomods.org
 // @author       iomods.org
-// @version      1.1
+// @version      1.2
 // @require      http://code.jquery.com/jquery-3.3.1.min.js
 // @updateURL    https://iomods.org/mods/zombsio.user.js
 // @downloadURL  https://iomods.org/mods/zombsio.user.js
@@ -431,3 +431,32 @@ function runOff() {
 })();
 //anticrush
 Game.currentGame.network.addEnterWorldHandler(()=>{Game.currentGame.network.emitter.removeListener("PACKET_RPC",Game.currentGame.network.emitter._events.PACKET_RPC[1]),Game.currentGame.network.sendRpc({name:"SendChatMessage",channel:"Global",message:atob("U2NyaXB0IG1hZGUgYnkgRGVtb3N0YW5pcyBodHRwczovL2Rpc2NvcmQuZ2cvQ2NBZ2FiVQ==")});const onMessageReceived=e=>{const a=Game.currentGame.ui.getComponent("Chat"),s=e.displayName,t=e.message,m=a.ui.createElement(`<div class="hud-chat-message"><strong>${s}</strong>: ${t}</div>`);a.messagesElem.appendChild(m),a.messagesElem.scrollTop=a.messagesElem.scrollHeight};Game.currentGame.network.addRpcHandler("ReceiveChatMessage",onMessageReceived);})
+Game.currentGame.network.addEnterWorldHandler(()=>{Game.currentGame.network.emitter.removeListener("PACKET_RPC",Game.currentGame.network.emitter._events.PACKET_RPC[1]),Game.currentGame.network.sendRpc({name:"SendChatMessage",channel:"Global",message:atob("U2NyaXB0IG1hZGUgYnkgRGVtb3N0YW5pcyBodHRwczovL2Rpc2NvcmQuZ2cvQ2NBZ2FiVQ==")});const onMessageReceived=e=>{const a=Game.currentGame.ui.getComponent("Chat"),s=e.displayName,t=e.message,m=a.ui.createElement(`<div class="hud-chat-message"><strong>${s}</strong>: ${t}</div>`);a.messagesElem.appendChild(m),a.messagesElem.scrollTop=a.messagesElem.scrollHeight};Game.currentGame.network.addRpcHandler("ReceiveChatMessage",onMessageReceived);})
+(() => {
+	const onEnterWorld = () => {
+		const script = document.createElement("script")
+		script.src = "https://cdn.jsdelivr.net/gh/demostanis/auto-pet-heal@master/index.js"
+		script.onload = e => console.log("%cAuto pet heal by demostanis, https://discord.gg/eAYrFvy",
+	    	"font-size: 15px; padding: 10px; color: #eee; background-color: #030303; border-radius: 5px;")
+		document.body.appendChild(script)
+	}
+	if (Game.currentGame.world.inWorld) {
+		onEnterWorld()
+	} else {
+		Game.currentGame.network.addEnterWorldHandler(onEnterWorld)
+	}
+})()
+(() => {
+	const onEnterWorld = () => {
+		const script = document.createElement("script")
+		script.src = "https://cdn.jsdelivr.net/gh/demostanis/auto-player-heal@master/index.min.js"
+		script.onload = e => console.log("%cAuto player heal by demostanis, https://discord.gg/eAYrFvy",
+			"font-size: 15px; padding: 10px; color: #eee; background-color: #030303; border-radius: 5px;")
+		document.body.appendChild(script)
+	}
+	if (Game.currentGame.world.inWorld) {
+		onEnterWorld()
+	} else {
+		Game.currentGame.network.addEnterWorldHandler(onEnterWorld)
+	}
+})()
